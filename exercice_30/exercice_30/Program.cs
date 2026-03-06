@@ -17,7 +17,7 @@ int minor = ConsoleExtension.Smallestnumber(matriz);
 
     Console.WriteLine("\nSumatoria de los elementos: " + sum);
 Console.WriteLine("Mayor elemento: " + elderly);
-Console.WriteLine("Menor elemento: " + minor);
+    Console.WriteLine("Menor elemento: " + minor);
 
 do
 {
