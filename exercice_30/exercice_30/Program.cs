@@ -25,4 +25,4 @@ do
 } while (!options.Any(x => x.Equals(answer, StringComparison.CurrentCultureIgnoreCase)));// validamos que la respuesta del usuario sea igual a alguna de las opciones que tenemos en la lista, el string comparison es para validar que no importe si el usuario escribe mayuscula o minuscula 
 
 } while (answer!.Equals("s", StringComparison.CurrentCultureIgnoreCase)) ;
-Console.WriteLine("F mi loco");
+Console.WriteLine("intenat de nuevo >:v");
