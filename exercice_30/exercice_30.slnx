@@ -1,3 +1,6 @@
 <Solution>
+  <Folder Name="/shared/">
+    <Project Path="Shared/Shared.csproj" Id="66eec2e8-9ab7-4b20-9914-784a2fb43e0c" />
+  </Folder>
   <Project Path="exercice_30/exercice_30.csproj" />
 </Solution>

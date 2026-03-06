@@ -1,51 +1,28 @@
-﻿using System;
+﻿using Shared;
+using System;
+var answer = string.Empty;
+var options = new List<string> { "s", "n" };
 
-class Program
+do { 
+var n = ConsoleExtension.GetInt("Ingrese el valor de N: ");
+
+//definition of the matrix
+int[,] matriz = ConsoleExtension.FillMatrix(n);
+Console.WriteLine("\nMatriz generada:\n");
+ConsoleExtension.View(matriz);
+
+int sum = ConsoleExtension.Sum(matriz);
+int elderly = ConsoleExtension.Greatestnumber(matriz);
+int minor = ConsoleExtension.Smallestnumber(matriz);
+
+Console.WriteLine("\nSumatoria de los elementos: " + sum);
+Console.WriteLine("Mayor elemento: " + elderly);
+Console.WriteLine("Menor elemento: " + minor);
+
+do
 {
-    static void Main()
-    {
-        Console.Write("Ingrese el valor de N: ");
-        int N = int.Parse(Console.ReadLine());
+    answer = ConsoleExtension.GetValidOptions("Desea continuar [S]i , [N]o?: ", options);
+} while (!options.Any(x => x.Equals(answer, StringComparison.CurrentCultureIgnoreCase)));// validamos que la respuesta del usuario sea igual a alguna de las opciones que tenemos en la lista, el string comparison es para validar que no importe si el usuario escribe mayuscula o minuscula 
 
-        int[,] matriz = new int[N, N];
-        int suma = 0;
-
-        // Llenar la matriz
-        for (int i = 0; i < N; i++)
-        {
-            for (int j = 0; j < N; j++)
-            {
-                matriz[i, j] = (i + 1) - j;
-            }
-        }
-
-        // Inicializar mayor y menor
-        int mayor = matriz[0, 0];
-        int menor = matriz[0, 0];
-
-        Console.WriteLine("\nMatriz generada:\n");
-
-        // Mostrar matriz y calcular suma, mayor y menor
-        for (int i = 0; i < N; i++)
-        {
-            for (int j = 0; j < N; j++)
-            {
-                Console.Write(matriz[i, j] + "\t");
-
-                suma += matriz[i, j];
-
-                if (matriz[i, j] > mayor)
-                    mayor = matriz[i, j];
-
-                if (matriz[i, j] < menor)
-                    menor = matriz[i, j];
-            }
-
-            Console.WriteLine();
-        }
-
-        Console.WriteLine("\nSumatoria de los elementos: " + suma);
-        Console.WriteLine("Mayor elemento: " + mayor);
-        Console.WriteLine("Menor elemento: " + menor);
-    }
-}
+} while (answer!.Equals("s", StringComparison.CurrentCultureIgnoreCase)) ;
+Console.WriteLine("F mi loco");
