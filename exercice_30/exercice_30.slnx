@@ -3,4 +3,5 @@
     <Project Path="Shared/Shared.csproj" Id="66eec2e8-9ab7-4b20-9914-784a2fb43e0c" />
   </Folder>
   <Project Path="exercice_30/exercice_30.csproj" />
+  <Project Path="WorkShop_35/WorkShop_35.csproj" Id="ae8acc56-ce42-49b9-9740-15a2290b87b7" />
 </Solution>
